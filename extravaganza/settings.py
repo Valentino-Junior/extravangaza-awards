@@ -36,8 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'awards',
     'cloudinary',
-    'bootstrap3',
+    'bootstrap4',
     'crispy_forms',
+    'star_ratings',
 
 
 ]
@@ -151,10 +152,13 @@ cloudinary.config(
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
+
+STAR_RATINGS_RERATE = False
+STAR_RATINGS_RANGE = 10
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
