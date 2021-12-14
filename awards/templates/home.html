@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-full banner content">
+<div class=" overlaybanner ">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class=" ml-5">
+    <a  class="text-white ml-5 pl-5 text-uppercase btn btn-outline-info" href="https://irenemercy.github.io/NaturalBeauty/"><h5>Visit Site</h5></a>
+  </div>
+</div>
+
+</div>
+
+<section id="projects">
+  <div class="container-fluid content mt-5">
+    <div class="container-fluid mb-5">
+      <div class="row">
+        <div class="col-md-8">
+          <h4>Sites of the day</h4>
+        </div>
+        <div class="col-md-4">
+          <h4>Mobile Excellence Site.</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row pl-2 pr-2 ml-1 mr-1">
+        {% for project_item in projects %}
+            <div class="col-lg-4">
+                <div class="card-deck">
+
+                    <div class="card">
+                      <!-- Card image -->
+                    <div class="view overlay zoom">
+                        <a href="/project/{{project_item.id}}">
+                        <img class="card-img-top" src="{{project_item.image.url}}" alt="{{ project_item.project_name }}" height="300px">
+                        </a>
+                      </div>
+
+                      <div class="card-body pr-2 pl-2 pr-2 mr-2">
+                        <h4 class="card-title ml-4">~ {{ project_item.title }}</h4>
+
+                      </div>
+                      <div class="card-footer">
+                        <span class="dark-text ml-2 mt-2"><img src="{{ project_item.author.profile.image.url }}" alt="" class="rounded-circle img-fluid mr-1 text-black" style="width: 30px;">BY {{project_item.author|upper}} <br>  <span class="ml-2 dark-text">{{project_item.created_date|timesince}}</span></span>
+                      </div>
+                    </div>
+
+
+                  </div>
+                <!-- end of card deck  -->
+  ​
+            </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
