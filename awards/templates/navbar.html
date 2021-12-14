@@ -3,12 +3,12 @@
 
 
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light" style="color: black; font-weight: bolder;">
 
     <!-- Navbar brand -->
     <div class="award">
         <a class="nav-link text-dark" href="/">
-            <h1><b>Extravaganza Awards</b></h1>
+            <h1 style="font-weight: bolder;"><b>Extravaganza Awards</b></h1>
             <span class="sr-only">(current)</span>
         </a>
     </div>
@@ -25,37 +25,37 @@
         <!-- Links -->
 
         <ul class="navbar-nav">
-            <div class="btn btn-dark -sm">
                 <form class="form-inline" action="{% url 'search' %}">
                     <div class="md-form my-0">
-                        <input class="form-control mr-sm-2 text-white" type="text" placeholder="Search"
+                        <input style="font-weight: bolder;" class="form-control mr-sm-2 text-white" type="text" placeholder="Search"
                             aria-label="Search" name="post">
-                    </div>
                 </form>
             </div>
         </ul>
     </div>
 
         <!-- Links -->
-        <ul class="navbar-nav mr-auto text-white ">
+        <div class="navbar-right">
+
+        <ul class="navbar-nav mr-auto text-white">
 
                 {% if user.is_authenticated %}
                 <!-- Dropdown -->
                 <li class="nav-item ml-2 ">
                     <a class="nav-link text-dark" href="{% url 'newproject' %}">
-                        <h5>POST PROJECT</h5>
+                        <h4 style="font-weight: bolder;">Post Project </h4>
                     </a>
                 </li>
 
                 <li class="nav-item dropdown ">
-                    <a href="#" class=" nav-link dropdown-toggle text-black" aria-haspopup="true" data-toggle="dropdown" role="button" aria-expanded="false">User
+                    <a style="font-weight: bolder;" href="#" class=" nav-link dropdown-toggle text-black" aria-haspopup="true" data-toggle="dropdown" role="button" aria-expanded="false">User
                     </a>
                     <ul class="dropdown-menu text-black" role="menu">
                         <li>
-                            <a href="{% url 'profile' %}">Profile</a>
+                            <a style="font-weight: bolder;" href="{% url 'profile' %}">Profile</a>
                         </li>
                         <li>
-                            <a href="{% url 'logout' %}">Logout</a>
+                            <a style="font-weight: bolder;" href="{% url 'logout' %}">Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -64,16 +64,17 @@
                 {% else %}
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="{% url 'login' %}">
-                        <h5>Login</h5>
+                        <h4 style="font-weight: bolder;">Login</h4>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="{% url 'register' %}">
-                        <h5>Register</h5>
+                        <h4 style="font-weight: bolder;">Register</h4>
                     </a>
                 </li>
                 {% endif %}
+            </div>
         </ul>
         
     <!-- Collapsible content -->
