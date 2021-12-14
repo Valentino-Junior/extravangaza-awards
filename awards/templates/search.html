@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br><br>
+<br><br>
+<div class="container content">
+  <div class="row">
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    {% if projects %}
+      {% for project in projects %}
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="profile-image">
+                <img class="profile-image" src="{{ project.author.profile.image.url }}" alt="img" height="30px">
+              </div>
+              <h2>{{project.author}}</h2>
+              <img class="w-100" src="{{project.image.url}}" alt="projects">
+              <br><br>
+              <h1 class="ml-5">Poject Title</h1>
+              <hr>
+              <h4 class="mt-3 ml-5">~ {{project.title}}</h4>
+              <h1 class="ml-5 mt-5">Project Description</h1>
+              <hr>
+              <h4 class="mt-2 ml-5">~ {{project.description}}</h4>
+              <h5 class="mt-5 ml-5 text-info">Posted ~ {{project.created_date|timesince}} ago</h5>
+              <a class="ml-5 text-black" href="{{project.link}}"><input class="btn btn-info text-black" type="button" value="Visit Site"></a>
+
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      {% else %}
+        <h5>No projects found with that title</h5>
+      {% endif %}
+  </div>
+</div>
+{% endblock %}
