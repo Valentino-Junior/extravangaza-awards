@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-full banner content">
+<div class=" overlaybanner text-center ">
+  <br><br><br><br><br><br><br><br><br><br><br>
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="ml-5">
+      <br><br><br><br><br><br><br>
+      <a  class="text-white ml-5 pl-5 text-uppercase btn btn-outline-info" href="https://irenemercy.github.io/NaturalBeauty/"><h5>Visit Site</h5></a>
+    </div>
+  </div>
+</div>
+</div>
+<section id="projects">
+  <div class="container-fluid content mt-5">
+    <div class="row pl-2 pr-2 ml-1 mr-1">
+        {% for project_item in projects %}
+            <div class="card">
+              <div class="card-body">
+                <div class="col-lg-4">
+                    <div class="card-deck">
+
+                        <div class="card">
+                          <!-- Card image -->
+                        <div class="view overlay zoom">
+                            <a href="/project/{{project_item.id}}">
+                            <img class="card-img-top" src="{{project_item.image.url}}" alt="{{ project_item.project_name }}" height="300px">
+                            </a>
+                          </div>
+
+                          <div class="card-body pr-2 pl-2 pr-2 mr-2">
+                            <h5 class="card-title ml-4">~ {{ project_item.title }}</h5>
+
+                          </div>
+                          <div class="card-footer">
+                            <small class="dark-text ml-2 mt-2"><img src="{{ project_item.author.profile.image.url }}" alt="" class="rounded-circle img-fluid mr-1" style="width: 30px;">BY {{project_item.author|upper}} <br>  <small class="ml-2 dark-text">{{project_item.created_date|timesince}}</small></small>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    <!-- end of card deck  -->
+      ​
+                </div>
+              </div>
+            </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
