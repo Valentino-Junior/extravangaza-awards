@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'star_ratings',
-
+    'rest_framework',
 
 ]
 
