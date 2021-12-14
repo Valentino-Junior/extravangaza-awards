@@ -7,7 +7,6 @@ from django.http import Http404
 from cloudinary.models import CloudinaryField
 
 
-
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = CloudinaryField('image')
@@ -62,6 +61,6 @@ class Projects(models.Model):
     def get_project(cls,id):
         try:
             project = Projects.objects.get(pk=id)
-        except ObjectDoesNotExist:
+        except FieldDoesNotExist:
             raise Http404()
         return project
