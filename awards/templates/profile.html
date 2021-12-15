@@ -12,10 +12,10 @@
                 <img class="rounded-circle account-profile " src="{{ user.profile.image.url }}" alt="user" height="120px" width="120px">
                 <div class="media-container mt-3">
                   <h2 class="account-header ml-5">{{user.username}}</h2>
-                  <p class="text-info">{{user.email}}</p>
+                  <p class="text-info" style="font-size: 14px;"><b>{{user.email}}</b></p>
                 </div>
-                <p class="ml-3">{{user.profile.bio}}</p>
-                <a class="btn btn-info" href="{% url 'updateprofile' %}">Update Profile</a>
+                <p class="ml-3" style="font-size: 12px;"><b>{{user.profile.bio}}</b></p>
+                <a class="btn btn-info" href="{% url 'updateprofile' %}"><b>Update Profile</b></a>
 
           </div>
         </div>
