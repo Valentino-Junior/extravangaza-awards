@@ -14,10 +14,6 @@ class ProfileTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.vale, Profile))
 
-    def tearDown(self):
-        User.objects.all().delete()
-        Profile.objects.all().delete()
-
     def test_save_profile(self):
         self.vale.save_profile()
         profiles=Profile.objects.all()
