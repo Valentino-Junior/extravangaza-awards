@@ -8,18 +8,18 @@
       <div class="col-md-3"></div>
       <div class="col-md-6 mt-5">
         <div class="card">
-          <div class="card-body bg-dark">
+          <div class="card-body well">
             <div class="card bg- pl-3 pr-3 text-black">
               <form  method="post" id="exampleModalCenter" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
-                  <legend class="border-bottom mb-4 text-center text-black mt-5">Update Account</legend>
+                  <legend class="border-bottom mb-4 text-center text-black mt-5"><b>Update profile </b></legend>
                   {{user_form|crispy}}
                   {{profile_form|crispy}}
 
                 </div>
                 <div class="form-group">
-                  <input type="submit" class="btn btn-outline-info w-100 pl-2 pr-2"  value="Update">
+                  <input type="submit" class="btn btn-info w-100"  value="Update">
                 </div>
               </form>
             </div>
