@@ -8,7 +8,7 @@
       <div class="col-md-3"></div>
       <div class="col-md-6 pt-5">
         <div class="card">
-          <div class="card-body bg-dark">
+          <div class="card-body well">
             <div class="card  pl-3 pr-3 text-black">
               <form  method="post">
                 {% csrf_token %}
@@ -17,7 +17,7 @@
                   {{form|crispy}}
                 </div>
                 <div class="form-group">
-                  <input type="submit" class="btn btn-outline-info w-100 pl-2 pr-2"  value="Login">
+                  <input type="submit" class="btn btn-info w-100 pl-2 pr-2"  value="Login">
                 </div>
               </form>
               <div class="border-bottom pt-3">
