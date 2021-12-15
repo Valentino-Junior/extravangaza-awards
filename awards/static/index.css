@@ -1,0 +1,15 @@
+.banner{
+    background-image: url(/static/images/pexels-nataliya-vaitkevich-6532600.jpg);
+    height:70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+  }
+  .overlaybanner{
+    background-color: black;
+    opacity: 0.7;
+    height:70vh;
+  }
+  .award{
+    font-size:50px;
+  }
