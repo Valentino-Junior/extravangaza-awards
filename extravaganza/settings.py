@@ -157,8 +157,9 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
 
-STAR_RATINGS_RERATE = False
+STAR_RATINGS_RERATE = True
 STAR_RATINGS_RANGE = 10
+STAR_RATINGS_RERATE_SAME_DELETE = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
