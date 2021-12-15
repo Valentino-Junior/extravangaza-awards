@@ -13,15 +13,15 @@
               <form  method="post">
                 {% csrf_token %}
                 <div class="form-group">
-                  <legend class="border-bottom mb-4 text-center mt-5">Login to your  account</legend>
+                  <legend class="border-bottom mb-4 text-center mt-5"><b>Please log in to your account.</b></legend>
                   {{form|crispy}}
                 </div>
                 <div class="form-group">
-                  <input type="submit" class="btn btn-info w-100 pl-2 pr-2"  value="Login">
+                  <input type="submit" class="btn btn-info w-100 "  value="Login">
                 </div>
               </form>
               <div class="border-bottom pt-3">
-                <p class="text-muted">Don't have an account?<a class="ml-2 text-info" href="{% url 'register' %}">Signup</a></p>
+                <p>Don't have an account?<a class="ml-2 text-info" href="{% url 'register' %}">Signup</a></p>
               </div>
             </div>
           </div>
