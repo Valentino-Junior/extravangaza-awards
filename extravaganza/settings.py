@@ -112,6 +112,22 @@ AUTHENTICATION_BACKENDS = (
 )
 
 
+TEMPLATES = [
+    {
+    
+        'OPTIONS': {
+        
+            'context_processors': [
+                
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
+                
+            ]
+        }
+    }
+]
+
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
