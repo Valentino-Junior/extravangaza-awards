@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'star_ratings',
     'rest_framework',
+
     'social_django'
 
 ]
@@ -54,6 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'extravaganza.urls'
@@ -105,8 +107,10 @@ ALLOWED_HOSTS = ['*']
 
 
 AUTHENTICATION_BACKENDS = (
-   'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
+
    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.linkedin.LinkedinOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
 )
@@ -161,6 +165,18 @@ cloudinary.config(
     api_key = '631573746168511',
     api_secret = 'uA38YXC4GoywEV4_6imvPbuDmoU',
 )
+
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '331077094277-8medoldve05a056ql7n6v0v8j1dos5ak.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+SOCIAL_AUTH_GITHUB_KEY = 'd60f056fca593fe5cc41'
+SOCIAL_AUTH_GITHUB_SECRET = 'bb6616ee122c3c6dad2547b2504a78cb12739baf'
+
+
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '77opr6874i264b'    #Client ID
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = '35tdEPWkjlHV8wKC'  #Client Secret
 
 
 # Default primary key field type
