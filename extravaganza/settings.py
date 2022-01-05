@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'star_ratings',
     'rest_framework',
+    'social_django'
 
 ]
 
@@ -163,3 +164,5 @@ STAR_RATINGS_RERATE_SAME_DELETE = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
+
+SOCIAL_AUTH_JSONFIELD_ENABLED = True
