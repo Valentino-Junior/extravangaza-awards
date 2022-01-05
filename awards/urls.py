@@ -18,6 +18,8 @@ urlpatterns = [
     path('api/profiles', views.ProfileList.as_view()),
     re_path(r'^ratings/', include('star_ratings.urls', namespace='ratings')),
 
+    path('social-auth/', include('social_django.urls', namespace='social'))
+
 
 
 
