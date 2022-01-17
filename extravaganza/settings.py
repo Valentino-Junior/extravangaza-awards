@@ -112,6 +112,8 @@ AUTHENTICATION_BACKENDS = (
    'social_core.backends.github.GithubOAuth2',
     'social_core.backends.linkedin.LinkedinOAuth2',
 
+    'social_core.backends.facebook.FacebookOAuth2',
+
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -177,6 +179,9 @@ SOCIAL_AUTH_GITHUB_SECRET = 'bb6616ee122c3c6dad2547b2504a78cb12739baf'
 
 SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '77opr6874i264b'    #Client ID
 SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = '35tdEPWkjlHV8wKC'  #Client Secret
+
+SOCIAL_AUTH_FACEBOOK_KEY='303618538391463'
+SOCIAL_AUTH_FACEBOOK_SECRET ='f81ca43f6800642a258ffa9151703e84'
 
 
 # Default primary key field type
